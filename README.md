@@ -1,12 +1,17 @@
-# Menu Bar Time Tracker
+# TimeTrack: A fun vibe coded Menu Bar Time Tracker
+(Work in progress, current iterations only been vibe coded. I intend to learn more swift and understand the codebase better to find out bugs. Feel free to do that, if you like how the app looks!)
 
-A minimal, native macOS menu bar app for lightweight time accountability. Track work sessions with a simple tag-first workflow, store everything locally, and keep a clean record for future analysis.
+I made this because I have severe executive dysfunction, and I will do literally anything except work. Like make an app. * cough cough * 
+
+Basically a minimal, native macOS menu bar app for time accountability. Track work sessions in the menu bar (the ribbon at the top), store everything locally, and keep a clean record of tasks done, with daily target goals and stuff. 
+
+Note that this is not at To-Do app. That's kinda uncool now. This is an app to keep accountability for what work you have done, because when you _track_ stuff, you _do_ stuff.
 
 ---
 
 ## 1) Product Goal
 
-Create a native macOS app that helps you remain accountable about what you work on, without interruptions or guesswork.
+Create a native macOS app that helps you remain accountable about what you work on, without interruptions.
 
 Core philosophy:
 - **Tag first, work continuously**: Select what you're working on, then let the timer run
