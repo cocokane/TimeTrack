@@ -1,4 +1,4 @@
-# TimeTrack: A fun vibe coded nenu bar time accountability app
+# TimeTrack: A fun vibe coded menu bar time accountability app
 (Work in progress, current iterations only been vibe coded. I intend to learn more swift and understand the codebase better to find out bugs. Feel free to do that, if you like how the app looks!)
 
 I made this because I have severe executive dysfunction, and I will do literally anything except work. Like make an app. * **cough cough** *
