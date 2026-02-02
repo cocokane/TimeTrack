@@ -1,4 +1,4 @@
-# TimeTrack: A fun vibe coded Menu Bar Time Tracker
+# TimeTrack: A fun vibe coded nenu bar time accountability app
 (Work in progress, current iterations only been vibe coded. I intend to learn more swift and understand the codebase better to find out bugs. Feel free to do that, if you like how the app looks!)
 
 I made this because I have severe executive dysfunction, and I will do literally anything except work. Like make an app. * cough cough * 
@@ -19,7 +19,6 @@ Note that this is not at To-Do app. That's kinda uncool now. This is an app to k
 
 I'm considering adding more things, like a calendar-like lookup on what you worked on, some data analytics, a more complex goal time measurer. 
 
-It's 4:20 am, I should sleep. 
 ---
 
 ## 1) Product Goal
