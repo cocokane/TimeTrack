@@ -15,20 +15,25 @@ struct PopoverView: View {
                 pausedView
             }
 
-            Divider()
-                .background(Color.gray.opacity(0.3))
-
-            Button("Open Dashboard") {
+            // Open Dashboard button
+            Button {
                 viewModel.showingDashboard = true
                 NSApp.activate(ignoringOtherApps: true)
+            } label: {
+                Text("Open Dashboard")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.white.opacity(0.8))
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white.opacity(0.1))
+                    .cornerRadius(8)
             }
             .buttonStyle(.plain)
-            .foregroundColor(.gold)
-            .font(.system(size: 12, weight: .medium))
         }
         .padding(16)
         .frame(width: 280)
-        .background(Color.darkBackground)
+        .background(.ultraThinMaterial)
     }
 
     // MARK: - Idle View
@@ -37,7 +42,7 @@ struct PopoverView: View {
         VStack(spacing: 12) {
             Text("Start a session")
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.white)
+                .foregroundColor(.white.opacity(0.9))
 
             // Tag chips
             if !viewModel.recentTags.isEmpty {
@@ -54,8 +59,8 @@ struct PopoverView: View {
             HStack {
                 TextField("Enter tag...", text: $viewModel.tagInput)
                     .textFieldStyle(.plain)
-                    .padding(8)
-                    .background(Color.cardBackground)
+                    .padding(10)
+                    .background(Color.white.opacity(0.1))
                     .cornerRadius(8)
                     .focused($isTagFieldFocused)
                     .onSubmit {
@@ -73,7 +78,7 @@ struct PopoverView: View {
         VStack(spacing: 16) {
             // Current tag
             if let session = viewModel.currentSession {
-                TagPillView(tagName: session.tag, isLarge: true)
+                TagPillView(tagName: session.tag, isLarge: true, style: .subtle)
             }
 
             // Elapsed time
@@ -82,17 +87,17 @@ struct PopoverView: View {
                 .foregroundColor(.white)
 
             // Action buttons
-            HStack(spacing: 12) {
-                ActionButton(title: "Pause", color: .orange) {
+            HStack(spacing: 10) {
+                PopoverActionButton(title: "Pause", style: .normal) {
                     viewModel.pauseSession()
                 }
 
-                ActionButton(title: "End", color: .red) {
+                PopoverActionButton(title: "End", style: .destructive) {
                     viewModel.endSession()
                     viewModel.showingDashboard = true
                 }
 
-                ActionButton(title: "Switch", color: .blue) {
+                PopoverActionButton(title: "Switch", style: .normal) {
                     viewModel.switchTask()
                 }
             }
@@ -106,34 +111,34 @@ struct PopoverView: View {
             // Paused indicator
             HStack(spacing: 8) {
                 Image(systemName: "pause.circle.fill")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.white.opacity(0.6))
                 Text("Paused")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.white.opacity(0.6))
                     .font(.system(size: 14, weight: .semibold))
             }
 
             // Current tag
             if let session = viewModel.currentSession {
-                TagPillView(tagName: session.tag, isLarge: true)
+                TagPillView(tagName: session.tag, isLarge: true, style: .subtle)
             }
 
             // Elapsed time (frozen)
             Text(viewModel.formatSessionTime(viewModel.currentSessionElapsed))
                 .font(.system(size: 32, weight: .light, design: .monospaced))
-                .foregroundColor(.white.opacity(0.6))
+                .foregroundColor(.white.opacity(0.5))
 
             // Action buttons
-            HStack(spacing: 12) {
-                ActionButton(title: "Resume", color: .green) {
+            HStack(spacing: 10) {
+                PopoverActionButton(title: "Resume", style: .normal) {
                     viewModel.resumeSession()
                 }
 
-                ActionButton(title: "End", color: .red) {
+                PopoverActionButton(title: "End", style: .destructive) {
                     viewModel.endSession()
                     viewModel.showingDashboard = true
                 }
 
-                ActionButton(title: "Switch", color: .blue) {
+                PopoverActionButton(title: "Switch", style: .normal) {
                     viewModel.switchTask()
                 }
             }
@@ -141,7 +146,42 @@ struct PopoverView: View {
     }
 }
 
-// MARK: - Action Button
+// MARK: - Popover Action Button
+
+struct PopoverActionButton: View {
+    let title: String
+    let style: ButtonStyle
+    let action: () -> Void
+
+    enum ButtonStyle {
+        case normal
+        case destructive
+    }
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 12, weight: .medium))
+                .foregroundColor(.white.opacity(0.9))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(backgroundColor)
+                .cornerRadius(8)
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var backgroundColor: Color {
+        switch style {
+        case .normal:
+            return Color.white.opacity(0.15)
+        case .destructive:
+            return Color.red.opacity(0.3)
+        }
+    }
+}
+
+// MARK: - Legacy Action Button (for other views)
 
 struct ActionButton: View {
     let title: String

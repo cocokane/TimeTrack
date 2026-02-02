@@ -2,17 +2,29 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Build Commands
+## Build & Run Commands
 
 ```bash
-# Build (debug)
+# Build and create app bundle (RECOMMENDED)
+./build-app.sh
+
+# Run the app (after building)
+open TimeTracker.app
+
+# Install to Applications folder (optional)
+cp -r TimeTracker.app /Applications/
+
+# Kill running instances
+pkill -9 -f "TimeTracker"
+```
+
+**Important:** Do NOT use `swift run` for this app. It must be run as a proper `.app` bundle for text input and focus handling to work correctly. Always use `./build-app.sh` then `open TimeTracker.app`.
+
+### Development Commands
+
+```bash
+# Quick compile check (no app bundle)
 swift build
-
-# Build (release)
-swift build -c release
-
-# Run the app
-swift run
 
 # Clean build artifacts
 swift package clean
@@ -50,14 +62,19 @@ This is a native macOS menu bar app built with Swift and SwiftUI. It uses Swift 
 
 ### UI Hierarchy
 
-- **PopoverView** - Minimal interface shown on menu bar click (tag selection, timer controls)
+- **PopoverView** - Translucent interface shown on menu bar click (tag selection, timer controls)
 - **DashboardView** - Main window with NavigationSplitView sidebar (Timeline + Settings tabs)
-- **TimelineView** - Chronological session list with inline editing
+- **TimelineView** - Chronological session list with inline editing (uses AppKit wrappers for text input)
 - **SettingsView** - Timer mode, daily target, reset time, tag management
+
+### Text Input Note
+
+Text fields in the main window use `EditableTextField` and `EditableTextView` (NSViewRepresentable wrappers in TimelineView.swift) instead of SwiftUI TextField/TextEditor. This is required for proper focus handling in the NSWindow context.
 
 ## Design Constraints
 
 - **LSUIElement = true** - App has no dock icon, lives only in menu bar
-- **Dark theme with gold accent** (#FFD700) - Defined in `TagChipView.swift` Color extensions
+- **Dark theme with translucent popover** - Uses `.ultraThinMaterial` for popover background
+- **Subtle colors in popover** - White/translucent buttons, gold accent in dashboard only
 - **Monospaced digits** for timer display stability
 - **macOS 13+** minimum deployment target

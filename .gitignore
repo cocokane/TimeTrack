@@ -1,0 +1,19 @@
+# Build artifacts
+.build/
+TimeTracker.app/
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# IDE
+.idea/
+.vscode/

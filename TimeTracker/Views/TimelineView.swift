@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 struct TimelineView: View {
     @ObservedObject var viewModel: TimerViewModel
@@ -229,11 +230,11 @@ struct SessionRowView: View {
                     .font(.system(size: 11, weight: .medium))
                     .foregroundColor(.secondaryText)
 
-                TextField("Brief summary (140 chars max)", text: $editingDescription)
-                    .textFieldStyle(.plain)
-                    .padding(8)
-                    .background(Color.darkBackground)
-                    .cornerRadius(6)
+                EditableTextField(
+                    text: $editingDescription,
+                    placeholder: "Brief summary (140 chars max)"
+                )
+                .frame(height: 32)
             }
 
             // Remarks
@@ -242,12 +243,7 @@ struct SessionRowView: View {
                     .font(.system(size: 11, weight: .medium))
                     .foregroundColor(.secondaryText)
 
-                TextEditor(text: $editingRemarks)
-                    .font(.system(size: 12))
-                    .scrollContentBackground(.hidden)
-                    .padding(8)
-                    .background(Color.darkBackground)
-                    .cornerRadius(6)
+                EditableTextView(text: $editingRemarks)
                     .frame(minHeight: 60, maxHeight: 120)
             }
 
@@ -276,5 +272,135 @@ struct SessionRowView: View {
         }
         .padding(16)
         .background(Color.cardBackground.opacity(0.8))
+    }
+}
+
+// MARK: - AppKit TextField Wrapper
+
+struct EditableTextField: NSViewRepresentable {
+    @Binding var text: String
+    var placeholder: String
+
+    func makeNSView(context: Context) -> NSTextField {
+        let textField = NSTextField()
+        textField.stringValue = text
+        textField.placeholderString = placeholder
+        textField.delegate = context.coordinator
+        textField.isBordered = false
+        textField.drawsBackground = true
+        textField.backgroundColor = NSColor(Color.darkBackground)
+        textField.textColor = .white
+        textField.font = NSFont.systemFont(ofSize: 12)
+        textField.focusRingType = .none
+        textField.wantsLayer = true
+        textField.layer?.cornerRadius = 6
+        textField.cell?.wraps = false
+        textField.cell?.isScrollable = true
+        return textField
+    }
+
+    func updateNSView(_ nsView: NSTextField, context: Context) {
+        if nsView.stringValue != text && !context.coordinator.isEditing {
+            nsView.stringValue = text
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject, NSTextFieldDelegate {
+        var parent: EditableTextField
+        var isEditing = false
+
+        init(_ parent: EditableTextField) {
+            self.parent = parent
+        }
+
+        func controlTextDidBeginEditing(_ obj: Notification) {
+            isEditing = true
+        }
+
+        func controlTextDidEndEditing(_ obj: Notification) {
+            isEditing = false
+        }
+
+        func controlTextDidChange(_ obj: Notification) {
+            if let textField = obj.object as? NSTextField {
+                parent.text = textField.stringValue
+            }
+        }
+    }
+}
+
+// MARK: - AppKit TextView Wrapper
+
+struct EditableTextView: NSViewRepresentable {
+    @Binding var text: String
+
+    func makeNSView(context: Context) -> NSScrollView {
+        let scrollView = NSScrollView()
+        let textView = NSTextView()
+
+        textView.string = text
+        textView.delegate = context.coordinator
+        textView.isRichText = false
+        textView.font = NSFont.systemFont(ofSize: 12)
+        textView.textColor = .white
+        textView.backgroundColor = NSColor(Color.darkBackground)
+        textView.isEditable = true
+        textView.isSelectable = true
+        textView.allowsUndo = true
+        textView.textContainerInset = NSSize(width: 8, height: 8)
+        textView.isVerticallyResizable = true
+        textView.isHorizontallyResizable = false
+        textView.textContainer?.widthTracksTextView = true
+
+        scrollView.documentView = textView
+        scrollView.hasVerticalScroller = true
+        scrollView.hasHorizontalScroller = false
+        scrollView.autohidesScrollers = true
+        scrollView.borderType = .noBorder
+        scrollView.drawsBackground = true
+        scrollView.backgroundColor = NSColor(Color.darkBackground)
+        scrollView.wantsLayer = true
+        scrollView.layer?.cornerRadius = 6
+
+        return scrollView
+    }
+
+    func updateNSView(_ nsView: NSScrollView, context: Context) {
+        if let textView = nsView.documentView as? NSTextView {
+            if textView.string != text && !context.coordinator.isEditing {
+                textView.string = text
+            }
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject, NSTextViewDelegate {
+        var parent: EditableTextView
+        var isEditing = false
+
+        init(_ parent: EditableTextView) {
+            self.parent = parent
+        }
+
+        func textDidBeginEditing(_ notification: Notification) {
+            isEditing = true
+        }
+
+        func textDidEndEditing(_ notification: Notification) {
+            isEditing = false
+        }
+
+        func textDidChange(_ notification: Notification) {
+            if let textView = notification.object as? NSTextView {
+                parent.text = textView.string
+            }
+        }
     }
 }

@@ -55,9 +55,9 @@ struct DashboardView: View {
 
             Spacer()
 
-            // Current status
+            // Current session with controls
             if viewModel.timerState != .idle, let session = viewModel.currentSession {
-                currentSessionIndicator(session: session)
+                currentSessionView(session: session)
             }
 
             // Daily progress
@@ -87,11 +87,14 @@ struct DashboardView: View {
         .padding(.horizontal, 8)
     }
 
-    private func currentSessionIndicator(session: Session) -> some View {
-        VStack(spacing: 8) {
+    // MARK: - Current Session View with Controls
+
+    private func currentSessionView(session: Session) -> some View {
+        VStack(spacing: 10) {
             Divider()
                 .background(Color.gray.opacity(0.3))
 
+            // Status indicator
             HStack {
                 Circle()
                     .fill(viewModel.timerState == .paused ? Color.orange : Color.green)
@@ -102,11 +105,35 @@ struct DashboardView: View {
                     .foregroundColor(.secondaryText)
             }
 
+            // Tag
             TagPillView(tagName: session.tag)
 
+            // Timer
             Text(viewModel.formatSessionTime(viewModel.currentSessionElapsed))
-                .font(.system(size: 14, design: .monospaced))
+                .font(.system(size: 16, weight: .medium, design: .monospaced))
                 .foregroundColor(.white)
+
+            // Control buttons
+            HStack(spacing: 6) {
+                if viewModel.timerState == .paused {
+                    SidebarControlButton(title: "Resume", color: .green) {
+                        viewModel.resumeSession()
+                    }
+                } else {
+                    SidebarControlButton(title: "Pause", color: .orange) {
+                        viewModel.pauseSession()
+                    }
+                }
+
+                SidebarControlButton(title: "End", color: .red) {
+                    viewModel.endSession()
+                }
+
+                SidebarControlButton(title: "Switch", color: .blue) {
+                    viewModel.switchTask()
+                }
+            }
+            .padding(.horizontal, 8)
         }
         .padding(.vertical, 12)
     }
@@ -177,5 +204,26 @@ struct DashboardView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+// MARK: - Sidebar Control Button
+
+struct SidebarControlButton: View {
+    let title: String
+    let color: Color
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 10, weight: .medium))
+                .foregroundColor(.white)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 5)
+                .background(color.opacity(0.7))
+                .cornerRadius(6)
+        }
+        .buttonStyle(.plain)
     }
 }
