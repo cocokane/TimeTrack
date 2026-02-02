@@ -7,6 +7,19 @@ Basically a minimal, native macOS menu bar app for time accountability. Track wo
 
 Note that this is not at To-Do app. That's kinda uncool now. This is an app to keep accountability for what work you have done, because when you _track_ stuff, you _do_ stuff.
 
+### A few images of the app:
+1. How the App looks from the menu bar: Just a timer. 
+![Menu bar display](images/menubar.png)
+2. Clicking the timer opens a popover:
+![Popover interface](images/popover.png)
+3. The Dashboard. The timeline shows the list of things you have worked on. 
+![Main window timeline](images/timeline.png)
+4. Settings. It can run in 2 modes - a daily timer with a specified goal time for work, or a stopwatch to track how long you worked on and on what. 
+![Settings panel](images/settings.png)
+
+I'm considering adding more things, like a calendar-like lookup on what you worked on, some data analytics, a more complex goal time measurer. 
+
+It's 4:20 am, I should sleep. 
 ---
 
 ## 1) Product Goal
