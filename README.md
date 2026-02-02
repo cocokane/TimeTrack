@@ -5,7 +5,7 @@ I made this because I have severe executive dysfunction, and I will do literally
 
 Basically a minimal, native macOS menu bar app for time accountability. Track work sessions in the menu bar (the ribbon at the top), store everything locally, and keep a clean record of tasks done, with daily target goals and stuff. 
 
-Note that this is not at To-Do app. That's kinda uncool now. This is an app to keep accountability for what work you have done, because when you _track_ stuff, you _do_ stuff.
+Note that this is not a to-do app. That's kinda uncool now. This is an app to keep accountability for what work you have done, because when you _track_ stuff, you _do_ stuff.
 
 ### App Screenshots
 
