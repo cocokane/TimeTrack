@@ -1,0 +1,6 @@
+1. Change it so the dock shows an icon for it. 
+2. Add more images. 
+3. Make the timer in the desktop show seconds, and make the font thinner. 
+4. The dashboard still shows the Pause, end and switch buttons in horrible colours. Correct that. 
+5. The hours and minutes textboxes need to be made bigger.
+6. The data analytics thingy - one more option in the dashboard to see work done over the week (in tags). Maybe also a calendar thingy. 
