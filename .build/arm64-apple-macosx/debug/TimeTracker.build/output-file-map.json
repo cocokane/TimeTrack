@@ -1,0 +1,96 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/master.swiftdeps"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/AppDelegate.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppDelegate.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppDelegate.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Models/AppSettings.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppSettings.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppSettings.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppSettings.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/AppSettings.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Models/Session.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Session.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Session.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Session~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Session.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Session.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Models/Tag.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Tag.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Tag.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Tag~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Tag.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/Tag.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Storage/StorageManager.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/StorageManager.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/StorageManager.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/StorageManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/StorageManager.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/StorageManager.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/TimeTrackerApp.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimeTrackerApp.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimeTrackerApp.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimeTrackerApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimeTrackerApp.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimeTrackerApp.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Utilities/HotkeyManager.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/HotkeyManager.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/HotkeyManager.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/HotkeyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/HotkeyManager.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/HotkeyManager.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/ViewModels/TimerViewModel.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimerViewModel.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimerViewModel.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimerViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimerViewModel.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimerViewModel.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Views/DashboardView.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/DashboardView.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/DashboardView.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/DashboardView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/DashboardView.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/DashboardView.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Views/PopoverView.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/PopoverView.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/PopoverView.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/PopoverView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/PopoverView.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/PopoverView.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Views/SettingsView.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/SettingsView.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/SettingsView.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Views/TagChipView.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TagChipView.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TagChipView.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TagChipView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TagChipView.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TagChipView.dia"
+  },
+  "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/TimeTracker/Views/TimelineView.swift": {
+    "dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimelineView.d",
+    "object": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimelineView.swift.o",
+    "swiftmodule": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimelineView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimelineView.swiftdeps",
+    "diagnostics": "/Users/yashkokane/Documents/Projects/Personal/TimeTracker/.build/arm64-apple-macosx/debug/TimeTracker.build/TimelineView.dia"
+  }
+}
