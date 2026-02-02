@@ -9,11 +9,11 @@ Note that this is not at To-Do app. That's kinda uncool now. This is an app to k
 
 ### A few images of the app:
 1. How the App looks from the menu bar: Just a timer. 
-![Menu bar display](images/menubar.png)
+![Menu bar display](images/timer.png)
 2. Clicking the timer opens a popover:
-![Popover interface](images/popover.png)
+![Popover interface](images/popup.png)
 3. The Dashboard. The timeline shows the list of things you have worked on. 
-![Main window timeline](images/timeline.png)
+![Main window timeline](images/working_window.png)
 4. Settings. It can run in 2 modes - a daily timer with a specified goal time for work, or a stopwatch to track how long you worked on and on what. 
 ![Settings panel](images/settings.png)
 
