@@ -1,7 +1,7 @@
 # TimeTrack: A fun vibe coded nenu bar time accountability app
 (Work in progress, current iterations only been vibe coded. I intend to learn more swift and understand the codebase better to find out bugs. Feel free to do that, if you like how the app looks!)
 
-I made this because I have severe executive dysfunction, and I will do literally anything except work. Like make an app. * cough cough * 
+I made this because I have severe executive dysfunction, and I will do literally anything except work. Like make an app. * **cough cough** *
 
 Basically a minimal, native macOS menu bar app for time accountability. Track work sessions in the menu bar (the ribbon at the top), store everything locally, and keep a clean record of tasks done, with daily target goals and stuff. 
 
@@ -10,17 +10,24 @@ Note that this is not at To-Do app. That's kinda uncool now. This is an app to k
 ### App Screenshots
 
 1. **Menu Bar Display** – Just a clean timer
-  ![Menu bar display](images/timer.png)
+<p align="center">
+  <img src="images/timer.png" alt="Menu bar display">
+</p>
 
 2. **Popover Interface** – Click the timer to open
-  ![Popover interface](images/popup.png)
+<p align="center">
+  <img src="images/popup.png" alt="Popover interface">
+</p>
 
 3. **Dashboard Timeline** – View all your work sessions
-  ![Main window timeline](images/working_window.png)
+<p align="center">
+  <img src="images/working_window.png" alt="Main window timeline">
+</p>
 
 4. **Settings Panel** – Choose between Target Time or Stopwatch mode
-  ![Settings panel](images/settings.png)
-
+<p align="center">
+  <img src="images/settings.png" alt="Settings panel">
+</p>
 
 I'm considering adding more things, like a calendar-like lookup on what you worked on, some data analytics, a more complex goal time measurer. 
 
